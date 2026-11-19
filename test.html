@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+
+    <title>Ink bleed</title>
+  </head>
+  <style>
+    @font-face {
+        font-family: 'NeueHaas';
+        src: url('Neue_Haas_Grotesk_Display/NeueHaasDisplay-Regular.otf') format('opentype');
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'NeueHaas';
+        src: url('Neue_Haas_Grotesk_Display/NeueHaasDisplay-Bold.otf') format('opentype');
+        font-weight: 700;
+        font-style: normal;
+    }
+
+ 
+
+</style>
+  <body>
+      font-family: Arial, Helvetica, sans-serif;
+    <h1 style="filter: blur(1px) url(#filter)">Hello World</h1>
+    <svg>
+      <filter id="filter">
+        <feComponentTransfer>
+          <feFuncA type="discrete" tableValues="0 1 1 1" />
+        </feComponentTransfer>
+      </filter>
+    </svg>
+  </body>
+</html>
